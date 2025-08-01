@@ -57,13 +57,45 @@
 
 //objeect
 
-var people = [
-      {firstname:"Jimmy",lastname:"Brown"},
-      {firstname:"Cindy",lastname:"Malcom"},
-      {firstname:"Timoty",lastname:"Stumps"}
-];
-function listnames(element,index){
-      var fullnames = [index + ":" + element.firstname, element.lastname].join(" ");
-      return fullnames;
-}
-console.log(people.map(listnames));
+// var people = [
+//       {firstname:"Jimmy",lastname:"Brown"},
+//       {firstname:"Cindy",lastname:"Malcom"},
+//       {firstname:"Timoty",lastname:"Stumps"}
+// ];
+// function listnames(element,index){
+//       var fullnames = [index + ":" + element.firstname, element.lastname].join(" ");
+//       return fullnames;
+// }
+// console.log(people.map(listnames));
+
+
+
+
+//reduce
+
+// var baskets = [2,4,6,8];
+// var totalApples = baskets.reduce((total,apple)=>{
+//       return total + apple;
+// },4);
+// console.log(totalApples);
+
+// var baskets = [2,4,6,8];
+// function applecount(total,apple){
+//       return total + apple;
+// }
+// var totalapple = baskets.reduce(applecount,0);
+// console.log(totalapple);
+
+
+// reduceright
+// let arr = [2,6,4,8,7];
+// let result = arr.reduceRight(function(acc,ele){
+//       return ele + acc;
+// },3)
+// console.log(result);
+
+// let result1 = arr.reduce(function(acc,ele){
+//       return ele + acc;
+// },4)
+// console.log(result1);
+
