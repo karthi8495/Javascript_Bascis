@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <div id="container">
+             <h1 id="main-title" class="main">Hello, World</h1>
+     </div>
+    <script>
+        // var title = document.getElementById("main-title");
+        // console.log(title);
+
+        // var title = document.getElementsByClassName("main");
+
+        // var title = document.getElementsByTagName('h1');
+        // console.log(title[0]);
+        // title[0].textContent = "Welcome to the DOM";
+
+        var container = document.getElementById("container");
+        var newparagraph = document.createElement("p");
+        newparagraph.textContent = "This is newly added paragraph";
+        console.log(newparagraph);
+        container.appendChild(newparagraph);
+        container.append("Some Test",document.createElement("span"));
+    </script> -->
+
+    <p class="text">First Paragraph</p>
+    <p class="text">Second paragraph</p>
+    <ul>
+        <li class="item">Item One</li>
+        <li class="item">Item Two</li>
+        <li class="item">Item Three</li>
+
+    </ul>
+
+    <script>
+        var firstpara = document.querySelector('.text');
+        // firstpara.style.fontweight = 'bold';
+        // firstpara.style.backgroundColor = "yellow";
+        console.log("QuerySelector",firstpara)
+
+        var items = document.querySelectorAll(".item");
+        console.log("QuerySelectorAll",items);
+        items.foreach(function(item){
+            item.style.border = "1px solid black";
+        });
+
+    </script>
+
+
+</body>
+</html>
