@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karthick'sMarket Day Adventures</title>
+</head>
+<body>
+    <h1>Karthik and Paati's Market Day To-Do List</h1>
+    <p>
+        Help Karthi prepare for the market by adding and managing Paati's shopping list!
+    </p>
+   
+    <input type="text" id="item-input" placeholder="Enter an item (e.g., Tomatoes)"/>
+
+    <button id="add-item">Add Item</button>
+
+    <ul id="shopping-list"></ul>
+
+    <p id="paati-says">Paati Says: "Dei Karthik, add some tomatoes and bananas!!!"</p>
+
+
+
+    <script>
+
+        const inputField = document.getElementById("item-input");
+        const addButton = document.getElementById("add-item");
+        const shoppingList = document.getElementById("shopping-list");
+        const paatiSays = document.getElementById("paati-says");
+
+        // Array to store shopping list items
+        let shoppingItems = [];
+
+        //Event listeners to add a new item when clicking the "ADD-item" button
+        addButton.addEventListener("click",function() {
+            debugger;
+            const newItem = inputField.value.trim();
+
+            if(newItem) {
+             
+                // Add the new item to the shopping list
+                shoppingItems.push(newItem);
+
+                // create a new list item (li) element and add it to the shopping 
+                const ListItem = document.createElement("li");
+                ListItem.textContent = newItem;
+
+                //create a button for removing the item
+
+                const removeButton = document.createElement("button");
+                removeButton.textContent = "Remove";
+                removeButton.style.marginLeft = "10px";
+                removeButton.addEventListener("mouseover",function(){
+                    removeButton.style.backgroundColor = "red";
+                });
+                removeButton.addEventListener("mouseout",function(){
+                    removeButton.style.backgroundColor = "initial";
+                });
+                removeButton.addEventListener("click",function(){
+                    ListItem.remove();
+                    pattiSays.textContent = "Paati says: Karthik, Nalla vela Panna!!! Nee " + newItem + "list le irrunthu thookita!!!!!"
+                });
+
+                // create a button for removing the item
+                const completeButton = document.createElemet("button");
+                completeButton.textContent = "mark us complete";
+                completeButton.style.marginLeft = "5px";
+                completeButton.addEventListener("click", function(){
+                    ListItem.style.textDecoration = "line-through";
+                    pattiSays.textContent = "Paati says: Karthik, romba super da!!! Nee" + newItem + "nall padiya vangita!!!";
+                });
+             
+                // Append buttons to the list
+                ListItem.appendChild(removeButton);
+                ListItem.appendChild(completeButton);
+
+                //Append the new list item to the shopping list
+                shoppingList.appendChild(listItem);
+
+                // clear the input fiels
+                inputField.vcalue = "";
+            }
+        });
+
+    </script>
+
+</body>
+</html>
